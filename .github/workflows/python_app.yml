@@ -29,6 +29,9 @@ jobs:
       - name: Clone current repo
         uses: actions/checkout@v3
 
+      - name: Install github actions requirements
+        run: make install_requirements_testing
+
       - name: Pip install current repo
         run: pip install .
 
