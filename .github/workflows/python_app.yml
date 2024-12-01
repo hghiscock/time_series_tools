@@ -26,11 +26,14 @@ jobs:
       - name: Install pip
         run: python -m pip install --upgrade pip
 
+      - name: Install github actions requirements
+        run: make install_requirements_testing
+
       - name: Clone current repo
         uses: actions/checkout@v3
 
       - name: Pip install current repo
-        run: make install_requirements_testing
+        run: pip install .
 
       - name: Lint with flake8
         run: |
