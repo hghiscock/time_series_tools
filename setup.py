@@ -8,6 +8,8 @@ setup(
     license="",
     install_requires=[
         "numpy==1.24.2",
+        "pandas==2.0.3",
         "PyWavelets==1.4.1",
+        "tensorflow==2.13.0",
     ]
 )
