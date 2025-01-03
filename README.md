@@ -22,3 +22,10 @@ training_batches = data.TFVariableLengthSequenceBatches(
     training_data, feature_list, label,
 )
 ```
+## Object detection
+1D CNN for detecting time series signatures. There is an optional multihead attention layer in the downsampled latent space that can improve performance with some tasks
+```python
+from time_series_tools.object_detection import models
+
+model = models.ObjectDetector1D(num_features, latent_space_attention=False)
+```
